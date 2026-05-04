@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrackHive — Stats</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">🐝 TrackHive</div>
+        <div class="nav-links">
+            <a href="/dashboard.html">Dashboard</a>
+            <a href="/applications.html">Applications</a>
+            <a href="/stats.html">Stats</a>
+            <a href="#" onclick="logout()">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>My Statistics 📊</h1>
+
+        <!-- Stats Summary -->
+        <div class="stats-grid">
+            <div class="stat-card total">
+                <div class="stat-number" id="total">0</div>
+                <div class="stat-label">Total Applied</div>
+            </div>
+            <div class="stat-card interview">
+                <div class="stat-number" id="interview">0</div>
+                <div class="stat-label">Interviews</div>
+            </div>
+            <div class="stat-card offer">
+                <div class="stat-number" id="offer">0</div>
+                <div class="stat-label">Offers</div>
+            </div>
+            <div class="stat-card rejected">
+                <div class="stat-number" id="rejected">0</div>
+                <div class="stat-label">Rejected</div>
+            </div>
+            <div class="stat-card ghosted">
+                <div class="stat-number" id="ghosted">0</div>
+                <div class="stat-label">Ghosted</div>
+            </div>
+        </div>
+
+        <!-- Response Rate -->
+        <div class="card">
+            <h2>Response Rate</h2>
+            <div class="rate-display">
+                <div class="rate-number" id="response-rate">0%</div>
+                <div class="rate-label">
+                    Companies that responded to your applications
+                </div>
+            </div>
+
+            <!-- Progress Bars -->
+            <div class="progress-section">
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Interview</span>
+                        <span id="interview-pct">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill interview" 
+                             id="interview-bar"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Offer</span>
+                        <span id="offer-pct">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill offer" 
+                             id="offer-bar"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Rejected</span>
+                        <span id="rejected-pct">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill rejected" 
+                             id="rejected-bar"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Ghosted</span>
+                        <span id="ghosted-pct">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill ghosted" 
+                             id="ghosted-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/stats.js"></script>
+</body>
+</html>

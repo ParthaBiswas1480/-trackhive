@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrackHive — Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">🐝 TrackHive</div>
+        <div class="nav-links">
+            <a href="/dashboard.html">Dashboard</a>
+            <a href="/applications.html">Applications</a>
+            <a href="/stats.html">Stats</a>
+            <a href="#" onclick="logout()">Logout</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- Welcome -->
+        <h1 class="welcome">Welcome back, <span id="user-name">...</span> 👋</h1>
+
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+            <div class="stat-card total">
+                <div class="stat-number" id="total">0</div>
+                <div class="stat-label">Total Applied</div>
+            </div>
+            <div class="stat-card interview">
+                <div class="stat-number" id="interview">0</div>
+                <div class="stat-label">Interviews</div>
+            </div>
+            <div class="stat-card offer">
+                <div class="stat-number" id="offer">0</div>
+                <div class="stat-label">Offers</div>
+            </div>
+            <div class="stat-card rejected">
+                <div class="stat-number" id="rejected">0</div>
+                <div class="stat-label">Rejected</div>
+            </div>
+            <div class="stat-card ghosted">
+                <div class="stat-number" id="ghosted">0</div>
+                <div class="stat-label">Ghosted</div>
+            </div>
+        </div>
+
+        <!-- Reminders -->
+        <div class="section">
+            <h2>⚠️ Reminders</h2>
+            <div id="reminders-list">Loading...</div>
+        </div>
+
+        <!-- Recent Applications -->
+        <div class="section">
+            <h2>🕐 Recent Applications</h2>
+            <div id="recent-list">Loading...</div>
+            <a href="/applications.html" class="btn-secondary">
+                View All Applications →
+            </a>
+        </div>
+
+    </div>
+
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>
